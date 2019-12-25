@@ -34,4 +34,4 @@ Container ID. It's dynamically allocated to avoid collisions with any other exis
 License
 -------
 
-See [LICENSE](https://github.com/miquecg/elixir-ide/blob/master/LICENSE).
+See [LICENSE](https://github.com/miquecg/ansible-roles/blob/master/LICENSE).
