@@ -1,14 +1,14 @@
-Arch Linux bootstrap
+Arch Linux container
 ====================
 
-Create an Arch Linux container image from latest bootstrap tarball available.
+Creates an Arch Linux container from latest bootstrap tarball available.
 
 Requirements
 ------------
 
 This role uses [`buildah`](https://github.com/containers/buildah/blob/master/install.md), a tool for building OCI images.
 
-Elevated privileges are needed to create root filesystems for containers.
+Elevated privileges are needed to create the root filesystem.
 
 Role Variables
 --------------
@@ -29,7 +29,7 @@ Date formatted as '%Y.%m.01'.
 
 **`working_container`**
 
-ID assigned to the container. It is a dynamic value to avoid collisions with any other existing container in the environment (e.g. previously created by this role).
+Container ID. It's dynamically allocated to avoid collisions with any other existing container in the environment (e.g. previously created by this role).
 
 License
 -------
