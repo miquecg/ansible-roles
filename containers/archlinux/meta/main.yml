@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: arch_container
+  author: Miguel Casal
+  description: Creates an Arch Linux container from latest bootstrap tarball available
+  license: MIT
+  galaxy_tags: []
+
+dependencies: []
