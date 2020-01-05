@@ -30,10 +30,9 @@
     dest: "{{ buildah_mount.stdout }}/etc/pacman.d/mirrorlist"
     mode: '0644'
     backup: yes
-- name: Copy pacman configurations
+- name: Copy pacman configuration
   copy:
     src: files/etc/
     dest: "{{ buildah_mount.stdout }}/etc/"
-    directory_mode: '0755'
     mode: '0644'
     backup: yes
