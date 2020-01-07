@@ -31,6 +31,19 @@ Date formatted as '%Y.%m.01'.
 
 Container ID. It's dynamically allocated to avoid collisions with any other existing container in the environment (e.g. previously created by this role).
 
+### templates
+
+**`main_mirror`**
+
+User can provide a mirror URL for pacman with higher priority than default ones.
+
+```yaml
+- include_role:
+    name: arch_container
+  vars:
+    main_mirror: https://osl.ugr.es/archlinux
+```
+
 License
 -------
 
