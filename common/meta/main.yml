@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: common
+  author: Miguel Casal
+  description: Common system setup tasks
+  license: MIT
+  galaxy_tags: []
+
+dependencies: []
