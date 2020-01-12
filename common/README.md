@@ -3,6 +3,15 @@ Common setup
 
 Common system setup tasks.
 
+Role Variables
+--------------
+
+### defaults
+
+```yaml
+locale: en_US.UTF-8
+```
+
 License
 -------
 
