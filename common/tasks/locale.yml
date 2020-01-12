@@ -3,3 +3,8 @@
   locale_gen:
     name: "{{ locale }}"
     state: present
+- name: Set system locale
+  template:
+    src: locale.j2
+    dest: /etc/locale.conf
+    mode: '0644'
