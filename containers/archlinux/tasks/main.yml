@@ -35,7 +35,7 @@
     backup: yes
 - name: Copy pacman configuration
   copy:
-    src: files/etc/
+    src: pacman.conf
     dest: "{{ buildah_mount.stdout }}/etc/"
     mode: '0644'
     backup: yes
