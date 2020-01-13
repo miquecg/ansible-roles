@@ -12,6 +12,12 @@ Role Variables
 locale: en_US.UTF-8
 ```
 
+### tasks
+
+**`timezone`**
+
+Valid timezone available at `/usr/share/zoneinfo` (e.g. Europe/Berlin). Required by `timezone.yml` task.
+
 License
 -------
 
