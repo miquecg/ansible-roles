@@ -20,8 +20,20 @@ archive_url: https://archive.archlinux.org/iso
 download_path: "{{ playbook_dir }}"
 ```
 
-### facts
-This role sets two facts during execution.
+### optional
+
+**`main_mirror`**
+
+Configure the mirror that pacman will try to use first.
+
+```yaml
+- include_role:
+    name: arch_container
+  vars:
+    main_mirror: https://osl.ugr.es/archlinux
+```
+
+### created
 
 **`bootstrap_release`**
 
@@ -30,19 +42,6 @@ Date formatted as '%Y.%m.01'.
 **`working_container`**
 
 Container ID. It's dynamically allocated to avoid collisions with any other existing container in the environment (e.g. previously created by this role).
-
-### templates
-
-**`main_mirror`**
-
-User can provide a mirror URL for pacman with higher priority than default ones.
-
-```yaml
-- include_role:
-    name: arch_container
-  vars:
-    main_mirror: https://osl.ugr.es/archlinux
-```
 
 License
 -------

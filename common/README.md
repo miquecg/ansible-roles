@@ -15,11 +15,11 @@ nameservers:
   secondary: 8.8.8.8
 ```
 
-### tasks
+### required
 
 **`timezone`**
 
-Valid timezone available at `/usr/share/zoneinfo` (e.g. Europe/Berlin). Required by `timezone.yml` task.
+Must be a valid timezone available at `/usr/share/zoneinfo` (e.g. Europe/Berlin). Required by `timezone.yml` task.
 
 License
 -------
