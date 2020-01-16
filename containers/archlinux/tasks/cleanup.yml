@@ -1,0 +1,8 @@
+---
+- name: Cleanup container files
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - /etc/hostname
+    - /etc/machine-id
