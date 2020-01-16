@@ -10,6 +10,9 @@ Role Variables
 
 ```yaml
 locale: en_US.UTF-8
+nameservers:
+  default: 1.1.1.1
+  secondary: 8.8.8.8
 ```
 
 ### tasks
