@@ -6,12 +6,11 @@ Common system setup tasks.
 Tasks
 -----
 
-This role offers the following tasks:
+`main.yml` does not include any. Load them on your playbook using `tasks_from`.
+
 - locale
 - nameservers
 - timezone
-
-`main.yml` does not include any. Load them on your playbook using `tasks_from`.
 
 Role Variables
 --------------
