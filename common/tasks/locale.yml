@@ -5,6 +5,6 @@
     state: present
 - name: Set system locale
   template:
-    src: locale.j2
+    src: locale.conf.j2
     dest: /etc/locale.conf
     mode: '0644'
