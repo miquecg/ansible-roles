@@ -1,4 +1,1 @@
 ---
-- include_tasks: locale.yml
-- include_tasks: timezone.yml
-- include_tasks: nameservers.yml
