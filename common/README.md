@@ -3,6 +3,15 @@ Common setup
 
 Common system setup tasks.
 
+Tasks
+-----
+
+`main.yml` does not include any. Load them on your playbook using `tasks_from`.
+
+- locale
+- nameservers
+- timezone
+
 Role Variables
 --------------
 
