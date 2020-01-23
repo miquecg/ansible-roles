@@ -18,7 +18,7 @@ Role Variables
 ### defaults
 
 ```yaml
-locale: en_US.UTF-8
+system_locale: en_US.UTF-8
 nameservers:
   default: 1.1.1.1
   secondary: 8.8.8.8
@@ -29,6 +29,12 @@ nameservers:
 **`timezone`**
 
 Must be a valid timezone available at `/usr/share/zoneinfo` (e.g. Europe/Berlin). Required by `timezone.yml` task.
+
+### optional
+
+**`locale`**
+
+Alternative locale to generate on the system. When this value is supplied no system locale is set.
 
 License
 -------
