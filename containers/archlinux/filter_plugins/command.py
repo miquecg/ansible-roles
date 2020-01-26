@@ -1,6 +1,6 @@
 from itertools import chain
 
-def to_list(options):
+def build_list(options):
     return list(chain.from_iterable(formatter(options)))
 
 def formatter(options):
@@ -13,5 +13,5 @@ class FilterModule(object):
 
     def filters(self):
         return {
-            'extra_opts': to_list
+            'opts_list': build_list
         }
