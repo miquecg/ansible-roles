@@ -2,16 +2,16 @@ from datetime import timedelta
 from functools import reduce, wraps
 from itertools import chain, repeat
 
-def formatter(func):
+def formatted(func):
     @wraps(func)
-    def wrapper(*args, **kwargs):
-        template = kwargs.pop('fmt', '%Y-%m-%d')
-        new_date = func(*args, **kwargs)
-        return new_date.strftime(template)
+    def date_with_format(*args, **kwargs):
+        format = kwargs.pop('fmt', '%Y-%m-%d')
+        date = func(*args, **kwargs)
+        return date.strftime(format)
 
-    return wrapper
+    return date_with_format
 
-@formatter
+@formatted
 def move_date(date, month=0):
     if month <= 0:
         times = abs(month)
