@@ -4,7 +4,7 @@ from functools import reduce, wraps
 def formatted(func):
     @wraps(func)
     def date_with_format(*args, **kwargs):
-        format = kwargs.pop('fmt', '%Y-%m-%d')
+        format = kwargs.pop('fmt', '%Y.%m.%d')
         date = func(*args, **kwargs)
         return date.strftime(format)
 
