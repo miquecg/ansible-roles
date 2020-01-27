@@ -12,7 +12,7 @@ def formatter(func):
     return wrapper
 
 @formatter
-def to_day_1(date, month=0):
+def move_date(date, month=0):
     if month <= 0:
         times = abs(month)
         steps = backwards_month_iterator(times)
@@ -32,5 +32,5 @@ class FilterModule(object):
 
     def filters(self):
         return {
-            'to_day_1': to_day_1
+            'day_one': move_date
         }
