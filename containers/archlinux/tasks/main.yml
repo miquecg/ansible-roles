@@ -11,10 +11,7 @@
     date: "{{ ansible_date_time.date | to_datetime('%Y-%m-%d') | day_one(months_back=1) }}"
   when: download_result is failed
 - name: Create an empty container
-  command:
-    argv: "{{ ['buildah', 'from'] + options + ['scratch'] }}"
-  vars:
-    options: "{{ (buildah_extra_args | default({})).from | default({}) | opts_list }}"
+  command: buildah from scratch
   register: buildah_from
 - name: "{{ buildah_from.stdout }} created"
   set_fact:
