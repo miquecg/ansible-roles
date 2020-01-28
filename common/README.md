@@ -9,7 +9,6 @@ Tasks
 `main.yml` does not include any. Load them on your playbook using `tasks_from`.
 
 - locale
-- nameservers
 - timezone
 
 Role Variables
@@ -19,9 +18,6 @@ Role Variables
 
 ```yaml
 system_locale: en_US.UTF-8
-nameservers:
-  default: 1.1.1.1
-  secondary: 8.8.8.8
 ```
 
 ### required
