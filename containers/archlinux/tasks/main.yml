@@ -16,6 +16,7 @@
 - name: "{{ buildah_from.stdout }} created"
   set_fact:
     working_container: "{{ buildah_from.stdout }}"
+    cacheable: yes
 - name: Mount {{ working_container }}
   command: buildah mount {{ working_container }}
   register: buildah_mount
