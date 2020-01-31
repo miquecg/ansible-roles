@@ -5,7 +5,7 @@
     state: present
   vars:
     value: "{{ locale | default(system_locale) }}"
-- name: Set system locale
+- name: Ensure system locale is {{ system_locale }}
   template:
     src: locale.conf.j2
     dest: /etc/locale.conf
