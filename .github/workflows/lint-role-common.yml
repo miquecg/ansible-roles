@@ -1,0 +1,23 @@
+---
+name: common
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths:
+      - 'common/**'
+  push:
+    branches:
+      - master
+    paths:
+      - 'common/**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint role common
+        uses: ansible/ansible-lint-action@master
+        with:
+          targets: common
