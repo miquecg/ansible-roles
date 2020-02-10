@@ -1,5 +1,5 @@
 ---
-name: lint arch_container
+name: arch_container
 
 on:
   pull_request:
