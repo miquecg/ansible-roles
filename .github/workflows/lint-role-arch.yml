@@ -1,0 +1,23 @@
+---
+name: arch_container
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    paths:
+      - 'containers/archlinux/**'
+  push:
+    branches:
+      - master
+    paths:
+      - 'containers/archlinux/**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint role arch_container
+        uses: ansible/ansible-lint-action@master
+        with:
+          targets: containers/archlinux
