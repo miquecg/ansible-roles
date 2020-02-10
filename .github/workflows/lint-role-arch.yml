@@ -6,6 +6,11 @@ on:
     types: [opened, reopened, synchronize]
     paths:
       - 'containers/archlinux/**'
+  push:
+    branches:
+      - master
+    paths:
+      - 'containers/archlinux/**'
 
 jobs:
   lint:
