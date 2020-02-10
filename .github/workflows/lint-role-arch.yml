@@ -4,6 +4,8 @@ name: arch_container
 on:
   pull_request:
     types: [opened, reopened, synchronize]
+    paths:
+      - 'containers/archlinux/**'
 
 jobs:
   lint:
