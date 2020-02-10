@@ -10,3 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Lint role arch_container
+        uses: ansible/ansible-lint-action@v4.1.0
+        with:
+          targets: containers/archlinux
