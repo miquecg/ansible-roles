@@ -4,6 +4,12 @@ galaxy_info:
   author: Miguel Casal
   description: Common system setup tasks
   license: MIT
+  min_ansible_version: 2.5
+  platforms:
+    - name: ArchLinux
+    - name: Debian
+      versions:
+        - buster
   galaxy_tags: []
 
 dependencies: []
