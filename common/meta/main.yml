@@ -4,6 +4,11 @@ galaxy_info:
   author: Miguel Casal
   description: Common system setup tasks
   license: MIT
+  platforms:
+    - name: ArchLinux
+    - name: Debian
+      versions:
+        - buster
   galaxy_tags: []
 
 dependencies: []
