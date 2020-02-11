@@ -1,5 +1,5 @@
 ---
-name: arch_container
+name: lint role arch_container
 
 on:
   pull_request:
@@ -13,11 +13,11 @@ on:
       - 'containers/archlinux/**'
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Lint role arch_container
+      - name: ansible-lint
         uses: ansible/ansible-lint-action@master
         with:
           targets: containers/archlinux

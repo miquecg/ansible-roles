@@ -1,5 +1,5 @@
 ---
-name: common
+name: lint role common
 
 on:
   pull_request:
@@ -13,11 +13,11 @@ on:
       - 'common/**'
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Lint role common
+      - name: ansible-lint
         uses: ansible/ansible-lint-action@master
         with:
           targets: common
