@@ -1,3 +1,5 @@
+![ansible-lint report](https://github.com/miquecg/ansible-roles/workflows/lint%20role%20common/badge.svg)
+
 Common setup
 ============
 

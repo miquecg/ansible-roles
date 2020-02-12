@@ -1,3 +1,5 @@
+![ansible-lint report](https://github.com/miquecg/ansible-roles/workflows/lint%20role%20arch_container/badge.svg)
+
 Arch Linux container
 ====================
 
