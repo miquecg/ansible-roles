@@ -43,7 +43,7 @@ Date formatted as '%Y.%m.01'.
 
 **`working_container`**
 
-Container ID. It's dynamically allocated to avoid collisions with any other existing container in the environment (e.g. previously created by this role).
+Container name. Dynamically allocated to avoid collisions with any other existing container in the environment (e.g. previously created by this role).
 
 License
 -------
