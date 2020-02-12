@@ -4,6 +4,12 @@ galaxy_info:
   author: Miguel Casal
   description: Creates an Arch Linux container from latest bootstrap tarball available
   license: MIT
+  min_ansible_version: 2.7
+  platforms:
+    - name: ArchLinux
+    - name: Debian
+      versions:
+        - buster
   galaxy_tags: []
 
 dependencies: []
