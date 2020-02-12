@@ -2,6 +2,6 @@
 - name: Init pacman keyring
   raw: pacman-key --init
   register: pacman_key_init
-  changed_when: pacman_key_init.stdout
+  changed_when: pacman_key_init.stdout | length > 0
 - name: Populate with keys of all official packagers
   raw: pacman-key --populate archlinux
