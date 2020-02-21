@@ -11,6 +11,7 @@
   command: chroot {{ buildah_mount.stdout }} /usr/bin/pacman-key --init
   register: pacman_key_init
   changed_when: pacman_key_init.stdout | length > 0
+  failed_when: pacman_key_init.stderr is search('key generation failed')
 - name: Populate with keys of all official packagers
   command: chroot {{ buildah_mount.stdout }} /usr/bin/pacman-key --populate archlinux
   changed_when: true
