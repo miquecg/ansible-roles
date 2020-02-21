@@ -1,4 +1,12 @@
 ---
+- name: Bind mount host /dev inside container
+  mount:
+    path: "{{ buildah_mount.stdout }}/dev"
+    src: /dev
+    opts: bind,ro
+    fstype: none
+    fstab: /tmp/fstab.dummy
+    state: mounted
 - name: Init pacman keyring
   command: chroot {{ buildah_mount.stdout }} /usr/bin/pacman-key --init
   register: pacman_key_init
