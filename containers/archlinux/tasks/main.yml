@@ -43,3 +43,5 @@
     mode: '0644'
     backup: yes
 - include_tasks: pacman-keyring.yml
+- name: Unmount {{ working_container }}
+  command: buildah umount {{ working_container }}
