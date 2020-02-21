@@ -42,3 +42,4 @@
     dest: "{{ buildah_mount.stdout }}/etc/"
     mode: '0644'
     backup: yes
+- include_tasks: pacman-keyring.yml
