@@ -45,5 +45,7 @@
 - include_tasks: pacman-keyring.yml
 - name: Unmount {{ working_container }}
   command: buildah umount {{ working_container }}
+  register: buildah_mount
+  changed_when: buildah_mount.stdout | length > 0
 - debug:
     msg: Container is ready!
