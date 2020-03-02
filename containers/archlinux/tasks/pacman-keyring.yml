@@ -19,7 +19,9 @@
       - --init
   register: pacman_key_init
   changed_when: pacman_key_init.stdout | length > 0
-  failed_when: pacman_key_init.stderr is search('key generation failed')
+  failed_when: >
+    (pacman_key_init.rc == 1) or
+    (pacman_key_init.stderr is search('key generation failed'))
 - name: Populate with keys of all official packagers
   command:
     argv:
