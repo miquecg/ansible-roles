@@ -1,12 +1,20 @@
 ---
-- name: Bind mount host /dev inside container
+- name: Touch files for devices
+  file:
+    path: &mount_point "{{ buildah_mount.stdout }}/dev/{{ item }}"
+    state: touch
+  loop: &loop_devices
+    - random
+    - urandom
+- name: Bind mount required devices
   mount:
-    path: "{{ buildah_mount.stdout }}/dev"
-    src: /dev
-    opts: bind,ro
+    path: *mount_point
+    src: /dev/{{ item }}
+    opts: bind
     fstype: none
     fstab: /tmp/fstab.dummy
     state: mounted
+  loop: *loop_devices
 - name: Init pacman keyring
   command:
     argv:
@@ -34,3 +42,14 @@
       - --populate
       - archlinux
   changed_when: true
+- name: Unmount devices
+  mount:
+    path: *mount_point
+    fstab: /tmp/fstab.dummy
+    state: unmounted
+  loop: *loop_devices
+- name: Remove mount points
+  file:
+    path: *mount_point
+    state: absent
+  loop: *loop_devices
